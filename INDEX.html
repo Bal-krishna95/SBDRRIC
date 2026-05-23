@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sant Bhikha Das Raja Ram Inter College - Uruwa Vaishya, Ayodhya</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Playfair+Display:wght@600;700&family=Lato:wght@400;600;700&display=swap');
+
+  :root {
+    --saffron: #FF6B00;
+    --saffron-light: #FFF3E8;
+    --saffron-dark: #C85000;
+    --navy: #1A3A6B;
+    --navy-light: #E8EFF8;
+    --navy-dark: #0D1F3C;
+    --green: #2D7A3A;
+    --green-light: #E8F5EB;
+    --white: #FFFFFF;
+    --gray-light: #F5F5F5;
+    --gray: #888;
+    --text: #1A1A1A;
+    --text-muted: #555;
+    --border: #E0E0E0;
+    --shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Lato', 'Noto Sans Devanagari', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    scroll-behavior: smooth;
+  }
+
+  /* ===== TOPBAR ===== */
+  .topbar {
+    background: var(--navy-dark);
+    color: #ccc;
+    font-size: 12.5px;
+    padding: 6px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .topbar a { color: #FFC87A; text-decoration: none; }
+  .topbar span { margin-right: 16px; }
+
+  /* ===== HEADER ===== */
+  header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+    padding: 18px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+  }
+  header img.logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid var(--saffron);
+    object-fit: cover;
+  }
+  .header-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #fff;
+    line-height: 1.3;
+  }
+  .header-text .hindi-name {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    font-size: 17px;
+    color: #FFC87A;
+    font-weight: 600;
+    margin: 2px 0;
+  }
+  .header-text p {
+    font-size: 13px;
+    color: #B0C4E8;
+    margin-top: 3px;
+  }
+  .header-badges {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+  .badge {
+    background: var(--saffron);
+    color: #fff;
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .badge.green { background: var(--green); }
+
+  /* ===== NAV ===== */
+  nav {
+    background: var(--saffron);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+  }
+  nav ul li a {
+    display: block;
+    padding: 13px 18px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s;
+    letter-spacing: 0.3px;
+  }
+  nav ul li a:hover, nav ul li a.active {
+    background: rgba(0,0,0,0.18);
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: linear-gradient(160deg, var(--navy-dark) 0%, #1e4a8a 50%, #1A5276 100%);
+    color: #fff;
+    padding: 64px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(255,107,0,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 350px; height: 350px;
+    background: radial-gradient(circle, rgba(255,200,0,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin-bottom: 6px;
+    position: relative;
+  }
+  .hero .hindi-hero {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    font-size: 22px;
+    color: #FFC87A;
+    margin-bottom: 14px;
+    position: relative;
+  }
+  .hero p {
+    font-size: 16px;
+    color: #B0C4E8;
+    max-width: 680px;
+    margin: 0 auto 28px;
+    line-height: 1.7;
+    position: relative;
+  }
+  .hero-buttons {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .btn {
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 14.5px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+  .btn-primary {
+    background: var(--saffron);
+    color: #fff;
+  }
+  .btn-primary:hover { background: var(--saffron-dark); }
+  .btn-outline {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.1); }
+
+  /* ===== STATS STRIP ===== */
+  .stats-strip {
+    background: var(--saffron);
+    padding: 20px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+    gap: 10px;
+    text-align: center;
+  }
+  .stat-item { color: #fff; }
+  .stat-item .num {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .stat-item .lbl {
+    font-size: 12.5px;
+    opacity: 0.9;
+    margin-top: 3px;
+  }
+
+  /* ===== SECTION BASE ===== */
+  section {
+    padding: 60px 30px;
+  }
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .section-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: var(--navy);
+    position: relative;
+    display: inline-block;
+  }
+  .section-title h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--saffron);
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  .section-title .subtitle {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-top: 8px;
+  }
+
+  /* ===== ABOUT ===== */
+  #about { background: var(--gray-light); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+  }
+  @media(max-width:760px){ .about-grid { grid-template-columns: 1fr; } }
+  .about-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+  .about-info p {
+    line-height: 1.8;
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+  .info-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+  .info-table tr { border-bottom: 1px solid var(--border); }
+  .info-table td { padding: 9px 8px; }
+  .info-table td:first-child { color: var(--navy); font-weight: 600; width: 40%; }
+
+  /* ===== NOTICE BOARD ===== */
+  #notices { background: #fff; }
+  .notices-container { max-width: 900px; margin: 0 auto; }
+  .notice-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+  }
+  .notice-tab {
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid var(--saffron);
+    color: var(--saffron);
+    background: #fff;
+    transition: all 0.2s;
+  }
+  .notice-tab.active, .notice-tab:hover {
+    background: var(--saffron);
+    color: #fff;
+  }
+  .notice-list { display: flex; flex-direction: column; gap: 12px; }
+  .notice-card {
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--saffron);
+    border-radius: 8px;
+    padding: 14px 18px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    transition: box-shadow 0.2s;
+  }
+  .notice-card:hover { box-shadow: var(--shadow); }
+  .notice-card.important { border-left-color: #E74C3C; }
+  .notice-card.result { border-left-color: var(--green); }
+  .notice-card .notice-title { font-weight: 600; font-size: 15px; color: var(--navy); margin-bottom: 4px; }
+  .notice-card .notice-desc { font-size: 13.5px; color: var(--text-muted); line-height: 1.5; }
+  .notice-card .notice-date {
+    font-size: 12px;
+    color: var(--gray);
+    white-space: nowrap;
+    background: var(--gray-light);
+    padding: 4px 10px;
+    border-radius: 20px;
+    flex-shrink: 0;
+  }
+  .new-badge {
+    display: inline-block;
+    background: #E74C3C;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+    animation: blink 1.5s infinite;
+  }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+  /* ===== ADMISSIONS ===== */
+  #admissions { background: var(--saffron-light); }
+  .admission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  @media(max-width:760px){ .admission-grid { grid-template-columns: 1fr; } }
+  .admission-info .info-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 18px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .admission-info .info-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .admission-info .info-card ul { list-style: none; }
+  .admission-info .info-card ul li {
+    padding: 6px 0;
+    font-size: 14px;
+    color: var(--text-muted);
+    border-bottom: 1px dashed var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .admission-info .info-card ul li:last-child { border: none; }
+  .admission-info .info-card ul li::before {
+    content: '✓';
+    color: var(--green);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  /* FORM */
+  .admission-form {
+    background: #fff;
+    border-radius: 14px;
+    padding: 32px 28px;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--saffron);
+  }
+  .admission-form h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .admission-form .form-hindi {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    color: var(--saffron);
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  @media(max-width:550px){ .form-row { grid-template-columns: 1fr; } }
+  .form-group { margin-bottom: 14px; }
+  .form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 5px;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 7px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: border 0.2s;
+    background: #fff;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--saffron);
+  }
+  .form-group textarea { resize: vertical; height: 80px; }
+  .submit-btn {
+    width: 100%;
+    padding: 13px;
+    background: var(--saffron);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: inherit;
+  }
+  .submit-btn:hover { background: var(--saffron-dark); }
+  .form-success {
+    display: none;
+    background: var(--green-light);
+    border: 1.5px solid var(--green);
+    color: var(--green);
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-size: 14.5px;
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  /* ===== GALLERY ===== */
+  #gallery { background: var(--gray-light); }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .gallery-item {
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--navy-light);
+    aspect-ratio: 4/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--border);
+    color: var(--navy);
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .gallery-item:hover {
+    border-color: var(--saffron);
+    box-shadow: 0 4px 16px rgba(255,107,0,0.2);
+    transform: translateY(-3px);
+  }
+  .gallery-item .gallery-icon { font-size: 36px; margin-bottom: 8px; }
+  .gallery-item .gallery-label { font-weight: 600; color: var(--navy); font-size: 14px; }
+  .gallery-item .gallery-sub { font-size: 12px; color: var(--gray); margin-top: 3px; }
+
+  /* ===== FACULTY ===== */
+  #faculty { background: #fff; }
+  .faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    gap: 22px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .faculty-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    padding: 24px 18px;
+    text-align: center;
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .faculty-card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transform: translateY(-4px);
+    border-color: var(--saffron);
+  }
+  .faculty-avatar {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: var(--navy-light);
+    margin: 0 auto 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--navy);
+    border: 3px solid var(--saffron);
+  }
+  .faculty-card .faculty-name { font-weight: 700; font-size: 15px; color: var(--navy); margin-bottom: 4px; }
+  .faculty-card .faculty-subject {
+    font-size: 13px;
+    color: var(--saffron);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .faculty-card .faculty-qual { font-size: 12.5px; color: var(--gray); }
+
+  /* ===== CONTACT ===== */
+  #contact { background: var(--navy-dark); color: #fff; }
+  #contact .section-title h2 { color: #fff; }
+  #contact .section-title h2::after { background: var(--saffron); }
+  #contact .section-title .subtitle { color: #B0C4E8; }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  @media(max-width:760px){ .contact-grid { grid-template-columns: 1fr; } }
+  .contact-info-block { display: flex; flex-direction: column; gap: 18px; }
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: rgba(255,255,255,0.06);
+    padding: 16px 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .contact-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .contact-item .ci-label { font-size: 12px; color: #FFC87A; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+  .contact-item .ci-value { font-size: 15px; color: #fff; margin-top: 3px; line-height: 1.5; }
+  .contact-form-box {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 28px;
+  }
+  .contact-form-box h3 { color: #fff; font-size: 20px; margin-bottom: 18px; font-family: 'Playfair Display', serif; }
+  .contact-form-box .form-group label { color: #B0C4E8; }
+  .contact-form-box .form-group input,
+  .contact-form-box .form-group textarea {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.2);
+    color: #fff;
+  }
+  .contact-form-box .form-group input::placeholder { color: rgba(255,255,255,0.4); }
+  .contact-form-box .form-group input:focus,
+  .contact-form-box .form-group textarea:focus {
+    border-color: var(--saffron);
+    background: rgba(255,255,255,0.14);
+  }
+  .contact-form-box .form-group textarea { color: #fff; }
+  .contact-form-box .form-group textarea::placeholder { color: rgba(255,255,255,0.4); }
+
+  /* ===== MAP ===== */
+  .map-section {
+    background: var(--gray-light);
+    padding: 0;
+  }
+  .map-section iframe {
+    width: 100%;
+    height: 320px;
+    border: none;
+    display: block;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #0A0F1E;
+    color: #aaa;
+    padding: 30px 30px 18px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 30px;
+    margin-bottom: 24px;
+    max-width: 1100px;
+    margin: 0 auto 24px;
+  }
+  .footer-col h4 { color: #FFC87A; font-size: 14.5px; font-weight: 700; margin-bottom: 12px; }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 7px; }
+  .footer-col ul li a { color: #aaa; text-decoration: none; font-size: 13.5px; }
+  .footer-col ul li a:hover { color: var(--saffron); }
+  .footer-bottom {
+    text-align: center;
+    font-size: 12.5px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 14px;
+    color: #777;
+  }
+  .footer-bottom span { color: var(--saffron); }
+
+  /* ===== MODAL ===== */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-overlay.show { display: flex; }
+  .modal-box {
+    background: #fff;
+    border-radius: 14px;
+    padding: 32px 28px;
+    max-width: 440px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: popIn 0.3s ease;
+  }
+  @keyframes popIn { from{transform:scale(0.85);opacity:0} to{transform:scale(1);opacity:1} }
+  .modal-box h3 { font-size: 22px; color: var(--green); margin-bottom: 10px; }
+  .modal-box p { color: var(--text-muted); font-size: 14.5px; margin-bottom: 18px; }
+  .modal-close {
+    background: var(--saffron);
+    color: #fff;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  /* ===== SCROLLBAR & SELECTION ===== */
+  ::-webkit-scrollbar { width: 7px; }
+  ::-webkit-scrollbar-track { background: #f1f1f1; }
+  ::-webkit-scrollbar-thumb { background: var(--saffron); border-radius: 4px; }
+  ::selection { background: var(--saffron); color: #fff; }
+
+  /* Scroll reveal */
+  .reveal { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div>
+    <span>📞 <a href="tel:8400200143">8400200143</a></span>
+    <span>✉️ <a href="mailto:pawansir781@gmail.com">pawansir781@gmail.com</a></span>
+  </div>
+  <div>
+    <span>📅 Academic Session: April 2025–26</span>
+    <span>🏫 Estd. 2010 | UP Board</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <img class="logo" src="data:image/webp;base64,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" alt="SBDRRIC Logo">
+  <div class="header-text">
+    <p class="hindi-name">संत भिखा दास राजाराम इंटर कॉलेज</p>
+    <h1>Sant Bhikha Das Raja Ram Inter College</h1>
+    <p>उरुवा वैश्य, हैरिंगटनगंज, अयोध्या, उत्तर प्रदेश &nbsp;|&nbsp; Affiliated: UP Board</p>
+  </div>
+  <div class="header-badges">
+    <span class="badge">Co-Educational</span>
+    <span class="badge green">Class VI – XII</span>
+    <span class="badge" style="background:var(--navy-dark)">Hindi Medium</span>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav>
+  <ul>
+    <li><a href="#home" class="active">🏠 Home</a></li>
+    <li><a href="#about">📘 About Us</a></li>
+    <li><a href="#notices">📢 Notices</a></li>
+    <li><a href="#admissions">📝 Admissions</a></li>
+    <li><a href="#gallery">🖼️ Gallery</a></li>
+    <li><a href="#faculty">👨‍🏫 Faculty</a></li>
+    <li><a href="#contact">📞 Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <h2>Welcome to Our School</h2>
+  <p class="hindi-hero">हमारे विद्यालय में आपका स्वागत है</p>
+  <p>A premier co-educational institution in Harringtonganj, Ayodhya, nurturing young minds from Class 6 to 12. Building character, knowledge, and a bright future since 2010.</p>
+  <div class="hero-buttons">
+    <a href="#admissions" class="btn btn-primary">Apply for Admission 📝</a>
+    <a href="#about" class="btn btn-outline">Learn More →</a>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stat-item"><div class="num">2010</div><div class="lbl">Established</div></div>
+  <div class="stat-item"><div class="num">6–12</div><div class="lbl">Classes Offered</div></div>
+  <div class="stat-item"><div class="num">500+</div><div class="lbl">Students Enrolled</div></div>
+  <div class="stat-item"><div class="num">20+</div><div class="lbl">Qualified Faculty</div></div>
+  <div class="stat-item"><div class="num">100%</div><div class="lbl">Safe Environment</div></div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-title reveal">
+    <h2>About Our School</h2>
+    <p class="subtitle">विद्यालय के बारे में</p>
+  </div>
+  <div class="about-grid">
+    <div class="about-info reveal">
+      <h3>Our Story / हमारी कहानी</h3>
+      <p>Sant Bhikha Das Raja Ram Inter College was established in 2010 with a vision to provide quality education to the rural youth of Uruwa Vaishya village and surrounding areas in Harringtonganj Block, Ayodhya.</p>
+      <p>As a private unaided co-educational institution, we proudly offer classes from 6th to 12th standard under the Hindi medium, affiliated with the Uttar Pradesh Madhyamik Shiksha Parishad (UP Board).</p>
+      <p>हमारा विद्यालय ग्रामीण बच्चों को उच्च गुणवत्ता की शिक्षा प्रदान करने के उद्देश्य से स्थापित किया गया है। हम अपने छात्रों के सर्वांगीण विकास के प्रति प्रतिबद्ध हैं।</p>
+    </div>
+    <div class="reveal">
+      <table class="info-table">
+        <tr><td>📅 Established</td><td>2010</td></tr>
+        <tr><td>🏫 School Type</td><td>Private Unaided (Co-educational)</td></tr>
+        <tr><td>📚 Classes</td><td>Class 6 to Class 12</td></tr>
+        <tr><td>🗣️ Medium</td><td>Hindi</td></tr>
+        <tr><td>🎓 Board</td><td>UP Board (UPMSP)</td></tr>
+        <tr><td>📆 Session Start</td><td>April</td></tr>
+        <tr><td>🏗️ Building</td><td>Private Pucca Building</td></tr>
+        <tr><td>💧 Drinking Water</td><td>Functional Hand-pump</td></tr>
+        <tr><td>🚻 Toilets</td><td>Separate for Boys & Girls</td></tr>
+        <tr><td>📍 Location</td><td>Uruwa Vaishya, Harringtonganj, Ayodhya, UP</td></tr>
+        <tr><td>📞 Phone</td><td>8400200143</td></tr>
+        <tr><td>✉️ Email</td><td>pawansir781@gmail.com</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- NOTICE BOARD -->
+<section id="notices">
+  <div class="section-title reveal">
+    <h2>Notice Board</h2>
+    <p class="subtitle">सूचना पट्ट — Latest Announcements</p>
+  </div>
+  <div class="notices-container">
+    <div class="notice-tabs">
+      <button class="notice-tab active" onclick="filterNotice('all',this)">All Notices</button>
+      <button class="notice-tab" onclick="filterNotice('admission',this)">Admissions</button>
+      <button class="notice-tab" onclick="filterNotice('exam',this)">Exams</button>
+      <button class="notice-tab" onclick="filterNotice('holiday',this)">Holidays</button>
+      <button class="notice-tab" onclick="filterNotice('result',this)">Results</button>
+    </div>
+    <div class="notice-list" id="noticeList">
+      <div class="notice-card" data-cat="admission">
+        <div><div class="notice-title">Admission Open 2025–26 <span class="new-badge">NEW</span></div><div class="notice-desc">Admissions are now open for Class 6 to 11. Students seeking admission should submit the application form with required documents by 30 June 2025.</div></div>
+        <span class="notice-date">20 May 2025</span>
+      </div>
+      <div class="notice-card important" data-cat="exam">
+        <div><div class="notice-title">UP Board Annual Exam Time-Table 2025 <span class="new-badge">NEW</span></div><div class="notice-desc">The UP Board annual examination schedule has been released. Class 10 & 12 students must report to their exam centers by 8:30 AM.</div></div>
+        <span class="notice-date">15 May 2025</span>
+      </div>
+      <div class="notice-card result" data-cat="result">
+        <div><div class="notice-title">Class 10 & 12 UP Board Result 2025</div><div class="notice-desc">Congratulations to all students. Results are available on upmsp.edu.in. Top scorers will be honored at the Annual Prize Distribution Function.</div></div>
+        <span class="notice-date">27 April 2025</span>
+      </div>
+      <div class="notice-card" data-cat="holiday">
+        <div><div class="notice-title">Summer Vacation Notice 2025</div><div class="notice-desc">The school will remain closed from 15 May to 30 June 2025 for summer vacations. School will reopen on 1 July 2025.</div></div>
+        <span class="notice-date">10 May 2025</span>
+      </div>
+      <div class="notice-card" data-cat="exam">
+        <div><div class="notice-title">Half-Yearly Examination Schedule</div><div class="notice-desc">Half-yearly examinations for Class 6–9 and 11 will be held from 1 October to 15 October 2025. Admit cards will be issued a week prior.</div></div>
+        <span class="notice-date">5 September 2025</span>
+      </div>
+      <div class="notice-card" data-cat="holiday">
+        <div><div class="notice-title">Diwali Holiday Announcement</div><div class="notice-desc">The school will remain closed from 20 to 24 October 2025 on account of Diwali festival. Classes resume on 25 October 2025.</div></div>
+        <span class="notice-date">15 October 2025</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSIONS -->
+<section id="admissions">
+  <div class="section-title reveal">
+    <h2>Admissions 2025–26</h2>
+    <p class="subtitle">प्रवेश फॉर्म — Online Application</p>
+  </div>
+  <div class="admission-grid">
+    <div class="admission-info reveal">
+      <div class="info-card">
+        <h3>📋 Eligibility</h3>
+        <ul>
+          <li>Class 6: Passed Class 5 from any recognized school</li>
+          <li>Class 9: Passed Class 8 with minimum 45% marks</li>
+          <li>Class 11 Science: Passed Class 10 with 60%+ in Science/Math</li>
+          <li>Class 11 Arts/Commerce: Passed Class 10 with 45%+ marks</li>
+          <li>Age criteria as per UP Board norms</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>📂 Required Documents</h3>
+        <ul>
+          <li>Aadhaar Card (Student & Parent)</li>
+          <li>Previous class Marksheet & TC</li>
+          <li>Birth Certificate</li>
+          <li>Passport Size Photographs (4 copies)</li>
+          <li>Caste Certificate (if applicable)</li>
+          <li>Income Certificate (for scholarship)</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>📅 Important Dates</h3>
+        <ul>
+          <li>Form Available From: 1 April 2025</li>
+          <li>Last Date to Apply: 30 June 2025</li>
+          <li>Session Begins: 1 July 2025</li>
+          <li>Document Verification: Within 7 days of applying</li>
+        </ul>
+      </div>
+    </div>
+    <div class="admission-form reveal">
+      <h3>Online Admission Form</h3>
+      <p class="form-hindi">ऑनलाइन प्रवेश फॉर्म भरें</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Student's Full Name *</label>
+          <input type="text" id="studentName" placeholder="Enter full name">
+        </div>
+        <div class="form-group">
+          <label>Date of Birth *</label>
+          <input type="date" id="dob">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Gender *</label>
+          <select id="gender">
+            <option value="">Select Gender</option>
+            <option>Male / पुरुष</option>
+            <option>Female / महिला</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Class Applying For *</label>
+          <select id="applyClass">
+            <option value="">Select Class</option>
+            <option>Class 6</option><option>Class 7</option><option>Class 8</option>
+            <option>Class 9</option><option>Class 10</option>
+            <option>Class 11 (Arts)</option><option>Class 11 (Science)</option><option>Class 11 (Commerce)</option>
+            <option>Class 12 (Arts)</option><option>Class 12 (Science)</option><option>Class 12 (Commerce)</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Father's Name *</label>
+          <input type="text" id="fatherName" placeholder="Father's full name">
+        </div>
+        <div class="form-group">
+          <label>Mother's Name *</label>
+          <input type="text" id="motherName" placeholder="Mother's full name">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Mobile Number *</label>
+          <input type="tel" id="mobile" placeholder="10-digit mobile number" maxlength="10">
+        </div>
+        <div class="form-group">
+          <label>Previous School</label>
+          <input type="text" id="prevSchool" placeholder="Previous school name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Permanent Address *</label>
+        <textarea id="address" placeholder="Village/Town, Post, District, PIN Code"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Caste Category</label>
+        <select id="caste">
+          <option value="">Select Category</option>
+          <option>General</option><option>OBC</option><option>SC</option><option>ST</option>
+        </select>
+      </div>
+      <button class="submit-btn" onclick="submitAdmission()">Submit Application / आवेदन जमा करें →</button>
+      <div class="form-success" id="admissionSuccess">
+        ✅ आपका आवेदन सफलतापूर्वक जमा हो गया! Your application has been submitted successfully.<br>
+        <small>We will contact you at the provided mobile number within 2-3 working days.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-title reveal">
+    <h2>Photo Gallery</h2>
+    <p class="subtitle">फोटो गैलरी — School Life & Events</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item reveal" onclick="alert('Gallery coming soon! Upload school photos to feature them here.')">
+      <div class="gallery-icon">🏫</div>
+      <div class="gallery-label">School Building</div>
+      <div class="gallery-sub">Our Campus</div>
+    </div>
+    <div class="gallery-item reveal" onclick="alert('Annual Function photos will be uploaded soon!')">
+      <div class="gallery-icon">🎭</div>
+      <div class="gallery-label">Annual Function</div>
+      <div class="gallery-sub">Cultural Events</div>
+    </div>
+    <div class="gallery-item reveal" onclick="alert('Sports Day photos will be uploaded soon!')">
+      <div class="gallery-icon">🏃</div>
+      <div class="gallery-label">Sports Day</div>
+      <div class="gallery-sub">Athletic Events</div>
+    </div>
+    <div class="gallery-item reveal" onclick="alert('Independence Day photos will be uploaded soon!')">
+      <div class="gallery-icon">🇮🇳</div>
+      <div class="gallery-label">Independence Day</div>
+      <div class="gallery-sub">National Events</div>
+    </div>
+    <div class="gallery-item reveal" onclick="alert('Science Exhibition photos will be uploaded soon!')">
+      <div class="gallery-icon">🔬</div>
+      <div class="gallery-label">Science Exhibition</div>
+      <div class="gallery-sub">Academic Events</div>
+    </div>
+    <div class="gallery-item reveal" onclick="alert('Classroom photos will be uploaded soon!')">
+      <div class="gallery-icon">📚</div>
+      <div class="gallery-label">Classrooms</div>
+      <div class="gallery-sub">Learning Spaces</div>
+    </div>
+    <div class="gallery-item reveal" onclick="alert('Prize Distribution photos will be uploaded soon!')">
+      <div class="gallery-icon">🏆</div>
+      <div class="gallery-label">Prize Distribution</div>
+      <div class="gallery-sub">Achievement Day</div>
+    </div>
+    <div class="gallery-item reveal" onclick="alert('Republic Day photos will be uploaded soon!')">
+      <div class="gallery-icon">🎖️</div>
+      <div class="gallery-label">Republic Day</div>
+      <div class="gallery-sub">26 January Parade</div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:24px;color:var(--gray);font-size:13.5px;">
+    📸 To add your school photos, contact: <a href="mailto:pawansir781@gmail.com" style="color:var(--saffron)">pawansir781@gmail.com</a>
+  </div>
+</section>
+
+<!-- FACULTY -->
+<section id="faculty">
+  <div class="section-title reveal">
+    <h2>Our Faculty</h2>
+    <p class="subtitle">हमारे शिक्षक — Dedicated Educators</p>
+  </div>
+  <div class="faculty-grid">
+    <div class="faculty-card reveal">
+      <div class="faculty-avatar">PK</div>
+      <div class="faculty-name">Pawan Kumar Sir</div>
+      <div class="faculty-subject">Principal / प्रधानाचार्य</div>
+      <div class="faculty-qual">M.A., B.Ed. | 15+ Years Experience</div>
+    </div>
+    <div class="faculty-card reveal">
+      <div class="faculty-avatar">RS</div>
+      <div class="faculty-name">Ramesh Sir</div>
+      <div class="faculty-subject">Mathematics / गणित</div>
+      <div class="faculty-qual">M.Sc. Math, B.Ed.</div>
+    </div>
+    <div class="faculty-card reveal">
+      <div class="faculty-avatar">SP</div>
+      <div class="faculty-name">Sunita Ma'am</div>
+      <div class="faculty-subject">Hindi / हिंदी</div>
+      <div class="faculty-qual">M.A. Hindi, B.Ed.</div>
+    </div>
+    <div class="faculty-card reveal">
+      <div class="faculty-avatar">AK</div>
+      <div class="faculty-name">Ajay Sir</div>
+      <div class="faculty-subject">Science / विज्ञान</div>
+      <div class="faculty-qual">M.Sc. Physics, B.Ed.</div>
+    </div>
+    <div class="faculty-card reveal">
+      <div class="faculty-avatar">PM</div>
+      <div class="faculty-name">Priya Ma'am</div>
+      <div class="faculty-subject">Social Science / सामाजिक विज्ञान</div>
+      <div class="faculty-qual">M.A. History, B.Ed.</div>
+    </div>
+    <div class="faculty-card reveal">
+      <div class="faculty-avatar">VT</div>
+      <div class="faculty-name">Vijay Sir</div>
+      <div class="faculty-subject">English / अंग्रेज़ी</div>
+      <div class="faculty-qual">M.A. English, B.Ed.</div>
+    </div>
+    <div class="faculty-card reveal">
+      <div class="faculty-avatar">MG</div>
+      <div class="faculty-name">Meena Ma'am</div>
+      <div class="faculty-subject">Sanskrit / संस्कृत</div>
+      <div class="faculty-qual">M.A. Sanskrit, B.Ed.</div>
+    </div>
+    <div class="faculty-card reveal" style="border: 2px dashed var(--saffron); background: var(--saffron-light);">
+      <div class="faculty-avatar" style="background:var(--saffron-light);color:var(--saffron);border-color:var(--saffron)">+</div>
+      <div class="faculty-name" style="color:var(--saffron)">Add Faculty</div>
+      <div class="faculty-subject">Contact to update</div>
+      <div class="faculty-qual">pawansir781@gmail.com</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-title reveal">
+    <h2>Contact Us</h2>
+    <p class="subtitle">संपर्क करें — Get in Touch</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info-block reveal">
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="ci-label">Address / पता</div>
+          <div class="ci-value">Sant Bhikha Das Raja Ram Inter College<br>Uruwa Vaishya, Harringtonganj Block<br>Ayodhya, Uttar Pradesh</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="ci-label">Phone / फ़ोन</div>
+          <div class="ci-value"><a href="tel:8400200143" style="color:#FFC87A;text-decoration:none;">8400200143</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <div class="ci-label">Email / ईमेल</div>
+          <div class="ci-value"><a href="mailto:pawansir781@gmail.com" style="color:#FFC87A;text-decoration:none;">pawansir781@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🕐</div>
+        <div>
+          <div class="ci-label">School Hours / समय</div>
+          <div class="ci-value">Monday – Saturday<br>7:30 AM – 2:00 PM</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📅</div>
+        <div>
+          <div class="ci-label">Academic Session</div>
+          <div class="ci-value">April – March (UP Board)</div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form-box reveal">
+      <h3>Send Us a Message</h3>
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" id="cName" placeholder="Full Name">
+      </div>
+      <div class="form-group">
+        <label>Mobile Number</label>
+        <input type="tel" id="cPhone" placeholder="10-digit number">
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <input type="text" id="cSubject" placeholder="e.g. Admission Inquiry">
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea id="cMessage" placeholder="Write your message here..."></textarea>
+      </div>
+      <button class="submit-btn" onclick="submitContact()">Send Message →</button>
+      <div class="form-success" id="contactSuccess">
+        ✅ Message sent successfully! We will get back to you soon. / आपका संदेश भेज दिया गया है!
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<div class="map-section">
+  <iframe src="https://maps.google.com/maps?q=Harringtonganj,+Ayodhya,+Uttar+Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>🏫 Sant Bhikha Das Raja Ram Inter College</h4>
+      <p style="font-size:13px;line-height:1.7;">Providing quality education in rural Ayodhya since 2010. Affiliated with UP Board, Classes 6–12.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#admissions">Admissions</a></li>
+        <li><a href="#notices">Notice Board</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#faculty">Faculty</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Info</h4>
+      <ul>
+        <li><a href="tel:8400200143">📞 8400200143</a></li>
+        <li><a href="mailto:pawansir781@gmail.com">✉️ pawansir781@gmail.com</a></li>
+        <li>📍 Uruwa Vaishya, Harringtonganj</li>
+        <li>🏙️ Ayodhya, Uttar Pradesh</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Academic Info</h4>
+      <ul>
+        <li>📚 UP Board Affiliated</li>
+        <li>🗓 Session: April – March</li>
+        <li>🕐 Mon–Sat: 7:30 AM – 2:00 PM</li>
+        <li>📖 Hindi Medium</li>
+        <li>🎓 Estd. 2010</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 Sant Bhikha Das Raja Ram Inter College, Ayodhya, UP. All Rights Reserved.<br>
+    <small>Designed with ❤️ for quality rural education | Contact: <span>pawansir781@gmail.com</span></small>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal-box">
+    <h3>🎉 आवेदन सफल!</h3>
+    <p>आपका प्रवेश आवेदन सफलतापूर्वक जमा हो गया है।<br><br>Your admission application has been submitted successfully! We will contact you on the provided mobile number within 2–3 working days.</p>
+    <button class="modal-close" onclick="closeModal()">OK, Got it!</button>
+  </div>
+</div>
+
+<script>
+  // Scroll Reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+
+  // Nav active
+  window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section[id]');
+    let cur = '';
+    sections.forEach(s => { if(pageYOffset >= s.offsetTop - 80) cur = s.id; });
+    document.querySelectorAll('nav a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#'+cur);
+    });
+  });
+
+  // Notice filter
+  function filterNotice(cat, btn) {
+    document.querySelectorAll('.notice-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.notice-card').forEach(c => {
+      c.style.display = (cat === 'all' || c.dataset.cat === cat) ? 'flex' : 'none';
+    });
+  }
+
+  // Admission form
+  function submitAdmission() {
+    const n = document.getElementById('studentName').value.trim();
+    const m = document.getElementById('mobile').value.trim();
+    const cl = document.getElementById('applyClass').value;
+    if(!n || !m || !cl) { alert('Please fill in all required fields. / कृपया सभी आवश्यक फ़ील्ड भरें।'); return; }
+    if(m.length !== 10 || isNaN(m)) { alert('Please enter a valid 10-digit mobile number.'); return; }
+    document.getElementById('admissionSuccess').style.display = 'block';
+    document.getElementById('successModal').classList.add('show');
+  }
+  function closeModal() { document.getElementById('successModal').classList.remove('show'); }
+
+  // Contact form
+  function submitContact() {
+    const n = document.getElementById('cName').value.trim();
+    const m = document.getElementById('cMessage').value.trim();
+    if(!n || !m) { alert('Please fill in your name and message.'); return; }
+    document.getElementById('contactSuccess').style.display = 'block';
+  }
+</script>
+</body>
+</html>
